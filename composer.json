@@ -1,0 +1,25 @@
+{
+    "name": "yasinkocak/laravel-angular-preset",
+    "description": "Laravel Angular preset",
+    "keywords": [
+        "laravel",
+        "preset",
+        "angular"
+    ],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "5.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "YasinKocak\\AngularPreset\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YasinKocak\\AngularPreset\\AngularPresetServiceProvider"
+            ]
+        }
+    }
+}
