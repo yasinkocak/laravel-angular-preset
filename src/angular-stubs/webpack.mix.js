@@ -11,7 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 mix.ts([
-   'resources/js/app.js', // Can deleted if no needed
    'resources/ts/vendor.ts',
    'resources/ts/polyfills.ts',
 ], 'public/js/vendor.js');

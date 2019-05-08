@@ -19,7 +19,7 @@ class AngularPreset extends Preset
         static::updateWebpackConfiguration();
 
         tap(new Filesystem, function ($filesystem) {
-            $filesystem->deleteDirectory(resource_path('js/components'));
+            $filesystem->deleteDirectory(resource_path('js'));
             $filesystem->makeDirectory(resource_path('ts'));
             $filesystem->makeDirectory(resource_path('ts/app'));
             $filesystem->makeDirectory(resource_path('ts/environments'));
@@ -85,6 +85,7 @@ class AngularPreset extends Preset
         copy(__DIR__ . '/angular-stubs/app/environment.ts', resource_path('ts/environments/environment.ts'));
         copy(__DIR__ . '/angular-stubs/app/tsconfig.json', resource_path('ts/tsconfig.json'));
         copy(__DIR__ . '/angular-stubs/app/tslint.json', resource_path('ts/tslint.json'));
+        copy(__DIR__ . '/angular-stubs/app/welcome.blade.php', resource_path('views/welcome.blade.php'));
         copy(__DIR__ . '/angular-stubs/polyfills.ts', resource_path('ts/polyfills.ts'));
         copy(__DIR__ . '/angular-stubs/vendor.ts', resource_path('ts/vendor.ts'));
         copy(__DIR__ . '/angular-stubs/tsconfig.json', base_path('tsconfig.json'));
